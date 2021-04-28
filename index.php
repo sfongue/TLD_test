@@ -5,13 +5,13 @@ class Main
     public function count()
     {
         echo "Choose a number N : ";
-        $handle = fopen ("php://stdin","r");
+        $handle = fopen ("php://stdin","%d");
         $number = fgets($handle);
         $number = trim((int) $number);
 
         // Checking the input
         if(empty($number)) {
-            echo "N is empty!\n";
+            echo "N is empty or not a number!\n";
             exit;
         }
         
